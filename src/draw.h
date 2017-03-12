@@ -23,7 +23,7 @@ protected:
 
     /** Implementation.
      *  Suppose 0 <= slope <= 1 */
-    virtual void drawImpl(int x0, int y0, int x1, int y1, const Color &color) = 0;
+    virtual void drawImpl(int x0, int y0, int x1, int y1, const Color &color);
 
 public:
     double totTime;

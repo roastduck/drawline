@@ -3,8 +3,9 @@
 #include <opencv2/opencv.hpp>
 #include "const.h"
 #include "canvas.h"
-#include "drawaa.h"
-#include "drawplain.h"
+#include "draw.h"
+#include "drawkernel.h"
+#include "drawsampling.h"
 
 int main()
 {
@@ -13,9 +14,11 @@ int main()
     const int LEN = std::min(X0, Y0) * 0.9;
 
     Canvas canvasPlain(IMG_HEIGHT, IMG_WIDTH, Color(255, 255, 255));
-    DrawPlain drawPlain(canvasPlain);
-    Canvas canvasAA(IMG_HEIGHT, IMG_WIDTH, Color(255, 255, 255));
-    DrawAA drawAA(canvasAA);
+    Draw drawPlain(canvasPlain);
+    Canvas canvasSampleing(IMG_HEIGHT, IMG_WIDTH, Color(255, 255, 255));
+    DrawSampling drawSampling(canvasSampleing);
+    Canvas canvasKernel(IMG_HEIGHT, IMG_WIDTH, Color(255, 255, 255));
+    DrawKernel drawKernel(canvasKernel);
 
     for (int i = 0; i < LINE_CNT; i++)
     {
@@ -25,13 +28,16 @@ int main()
         cv::Mat3b matHSV(colorHSV), matBGR;
         cv::cvtColor(matHSV, matBGR, cv::COLOR_HSV2BGR_FULL);
         drawPlain.draw(X0 - dx, Y0 - dy, X0 + dx, Y0 + dy, matBGR(0, 0));
-        drawAA.draw(X0 - dx, Y0 - dy, X0 + dx, Y0 + dy, matBGR(0, 0));
+        drawSampling.draw(X0 - dx, Y0 - dy, X0 + dx, Y0 + dy, matBGR(0, 0));
+        drawKernel.draw(X0 - dx, Y0 - dy, X0 + dx, Y0 + dy, matBGR(0, 0));
     }
 
     std::clog << "Plain: Drew " << LINE_CNT << " lines in " << drawPlain.totTime << "secs" << std::endl;
-    std::clog << "Anti-Alias: Drew " << LINE_CNT << " lines in " << drawAA.totTime << "secs" << std::endl;
+    std::clog << "Anti-Alias (Sampling): Drew " << LINE_CNT << " lines in " << drawSampling.totTime << "secs" << std::endl;
+    std::clog << "Anti-Alias (Kernel): Drew " << LINE_CNT << " lines in " << drawKernel.totTime << "secs" << std::endl;
     canvasPlain.save("plain.png");
-    canvasAA.save("aa.png");
+    canvasSampleing.save("sampling.png");
+    canvasKernel.save("kernel.png");
     return 0;
 }
 

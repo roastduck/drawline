@@ -8,7 +8,7 @@ SRC = $(wildcard *.cpp)
 OBJ = $(SRC:%.cpp=%.o)
 
 main : .depend $(OBJ)
-	g++ $(SRC) -o $@ $(PARAM) -lopencv_core -lopencv_imgproc -lopencv_imgcodecs
+	g++ $(OBJ) -o $@ $(PARAM) -lopencv_core -lopencv_imgproc -lopencv_imgcodecs
 
 .depend : $(SRC)
 	rm -f .depend

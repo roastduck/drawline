@@ -1,19 +1,16 @@
 #include <cstdlib>
-#include "drawaa.h"
+#include "drawsampling.h"
 
-constexpr DrawAA::WeightMat DrawAA::WEIGHT;
-
-DrawAA::WeightMat DrawAA::genSum()
+DrawSampling::WeightMat DrawSampling::genSum() const
 {
-    DrawAA::WeightMat ret(WEIGHT);
+    DrawSampling::WeightMat ret(WEIGHT);
     for (int i = 1; i < LEN; i++)
         for (int j = 0; j < LEN; j++)
             ret[i][j] += ret[i - 1][j];
     return ret;
 }
-DrawAA::WeightMat DrawAA::SUM = DrawAA::genSum();
 
-void DrawAA::drawImpl(int x0, int y0, int x1, int y1, const Color &color)
+void DrawSampling::drawImpl(int x0, int y0, int x1, int y1, const Color &color)
 {
     int realX(x0), realY(y0), gridX(0), gridY(0); // Scaled x = realX * LEN + gridX, y the same
     int minY(y0); // Mininum realY while realX has not been changed
