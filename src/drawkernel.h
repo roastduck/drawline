@@ -4,6 +4,7 @@
 #include <iostream>
 #include "drawsampling.h"
 
+/** Kernel algorithm, i.e. weighted sampling algorithm */
 class DrawKernel : public DrawSampling
 {
 public:

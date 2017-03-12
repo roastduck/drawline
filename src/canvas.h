@@ -31,6 +31,14 @@ public:
         std::clog << "Ouput saved to " << filename << std::endl;
         cv::imwrite(filename, data);
     }
+
+    void saveResized(const char *filename, int _height, int _width) const
+    {
+        std::clog << "Ouput saved to " << filename << std::endl;
+        cv::Mat3b output;
+        cv::resize(data, output, cv::Size(_height, _width), 0, 0, cv::INTER_AREA);
+        cv::imwrite(filename, output);
+    }
 };
 
 #endif // CANVAS_H_

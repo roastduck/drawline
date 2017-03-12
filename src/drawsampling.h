@@ -4,7 +4,7 @@
 #include <array>
 #include "draw.h"
 
-/** Anti-alisasing algorithm */
+/** Uniform sampling algorithm */
 class DrawSampling : public Draw
 {
 protected:

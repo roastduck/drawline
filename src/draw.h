@@ -4,7 +4,7 @@
 #include <ctime>
 #include "canvas.h"
 
-/** Base class for both plain and AA algorithm */
+/** Plain draw-line algorithm */
 class Draw
 {
 private:
