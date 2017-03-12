@@ -14,6 +14,8 @@ void Draw::drawPixel(int x, int y, const Color &color, int alphaU, int alphaD)
 
 void Draw::draw(int x0, int y0, int x1, int y1, const Color &color)
 {
+    clock_t clockSt = clock();
+
     if (y1 < y0)
         std::swap(x0, x1), std::swap(y0, y1);
     assert(y1 >= y0);
@@ -29,5 +31,8 @@ void Draw::draw(int x0, int y0, int x1, int y1, const Color &color)
 
     assert(octant >= 0 && octant < 4);
     drawImpl(x0, y0, x1, y1, color);
+
+    clock_t clockEn = clock();
+    totTime += double(clockEn - clockSt) / CLOCKS_PER_SEC;
 }
 

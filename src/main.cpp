@@ -28,6 +28,8 @@ int main()
         drawAA.draw(X0 - dx, Y0 - dy, X0 + dx, Y0 + dy, matBGR(0, 0));
     }
 
+    std::clog << "Plain: Drew " << LINE_CNT << " lines in " << drawPlain.totTime << "secs" << std::endl;
+    std::clog << "Anti-Alias: Drew " << LINE_CNT << " lines in " << drawAA.totTime << "secs" << std::endl;
     canvasPlain.save("plain.png");
     canvasAA.save("aa.png");
     return 0;

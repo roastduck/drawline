@@ -1,6 +1,7 @@
 #ifndef DRAW_H_
 #define DRAW_H_
 
+#include <ctime>
 #include "canvas.h"
 
 /** Base class for both plain and AA algorithm */
@@ -25,7 +26,9 @@ protected:
     virtual void drawImpl(int x0, int y0, int x1, int y1, const Color &color) = 0;
 
 public:
-    Draw(Canvas &_canvas) : canvas(_canvas) {}
+    double totTime;
+
+    Draw(Canvas &_canvas) : canvas(_canvas), totTime(0) {}
     
     /** Draw a line: (x0, y0) -> (x1, y1) */
     void draw(int x0, int y0, int x1, int y1, const Color &color);

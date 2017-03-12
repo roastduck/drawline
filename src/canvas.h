@@ -1,6 +1,7 @@
 #ifndef CANVAS_H_
 #define CANVAS_H_
 
+#include <iostream>
 #include <opencv2/opencv.hpp>
 
 typedef cv::Vec3b Color;
@@ -27,7 +28,7 @@ public:
     /** Save to file */
     void save(const char *filename) const
     {
-        cv::Mat output;
+        std::clog << "Ouput saved to " << filename << std::endl;
         cv::imwrite(filename, data);
     }
 };
