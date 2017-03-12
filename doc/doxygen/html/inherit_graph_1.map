@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDraw.html" title="Plain draw&#45;line algorithm. " alt="" coords="5,31,59,57"/>
+<area shape="rect" id="node2" href="$classDrawSampling.html" title="Uniform sampling algorithm. " alt="" coords="107,5,213,32"/>
+<area shape="rect" id="node4" href="$classDrawWidth.html" title="Draw lines with a width. " alt="" coords="117,56,203,83"/>
+<area shape="rect" id="node3" href="$classDrawKernel.html" title="Kernel algorithm, i.e. " alt="" coords="261,5,352,32"/>
+</map>

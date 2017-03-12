@@ -1,0 +1,10 @@
+<map id="canvas.h" name="canvas.h">
+<area shape="rect" id="node2" href="$draw_8h.html" title="draw.h" alt="" coords="311,80,372,107"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="304,304,379,331"/>
+<area shape="rect" id="node3" href="$draw_8cpp.html" title="draw.cpp" alt="" coords="84,155,159,181"/>
+<area shape="rect" id="node4" href="$drawsampling_8h.html" title="drawsampling.h" alt="" coords="183,155,297,181"/>
+<area shape="rect" id="node8" href="$drawwidth_8h.html" title="drawwidth.h" alt="" coords="379,155,471,181"/>
+<area shape="rect" id="node5" href="$drawkernel_8h.html" title="drawkernel.h" alt="" coords="5,229,101,256"/>
+<area shape="rect" id="node7" href="$drawsampling_8cpp.html" title="drawsampling.cpp" alt="" coords="177,229,303,256"/>
+<area shape="rect" id="node9" href="$drawwidth_8cpp.html" title="drawwidth.cpp" alt="" coords="429,229,536,256"/>
+</map>

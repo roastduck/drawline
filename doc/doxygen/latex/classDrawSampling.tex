@@ -1,0 +1,136 @@
+\hypertarget{classDrawSampling}{}\section{Draw\+Sampling Class Reference}
+\label{classDrawSampling}\index{Draw\+Sampling@{Draw\+Sampling}}
+
+
+Uniform sampling algorithm.  
+
+
+
+
+{\ttfamily \#include $<$drawsampling.\+h$>$}
+
+
+
+Inheritance diagram for Draw\+Sampling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classDrawSampling__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Draw\+Sampling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classDrawSampling__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrawSampling_aa02ae6778de2385b7451f62f1e03cb1e}{Draw\+Sampling} (\hyperlink{classCanvas}{Canvas} \&\hyperlink{classDraw_a72ed77716d9eb7068414f0e4e00753bd}{canvas})
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::array$<$ std\+::array$<$ int, \hyperlink{classDrawSampling_a65a0b2e1d234d93049c4807d32fd009d}{L\+EN} $>$, \hyperlink{classDrawSampling_a65a0b2e1d234d93049c4807d32fd009d}{L\+EN} $>$ \hyperlink{classDrawSampling_a73c5d308c9d35c89746810be84e6834d}{Weight\+Mat}
+\begin{DoxyCompactList}\small\item\em Slide length of the fine division. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrawSampling_a73c5d308c9d35c89746810be84e6834d}{Weight\+Mat} \hyperlink{classDrawSampling_ac5f43bc9f50a57bb7226f6e971c0fd53}{gen\+Sum} () const 
+\item 
+void \hyperlink{classDrawSampling_a3d67fd8278cf17d4cb35958aa1a21e31}{draw\+Impl} (int x0, int y0, int x1, int y1, const \hyperlink{canvas_8h_a084a39206618848fb8bc9187d3758c87}{Color} \&color) override
+\begin{DoxyCompactList}\small\item\em Implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrawSampling_a73c5d308c9d35c89746810be84e6834d}{Weight\+Mat} \hyperlink{classDrawSampling_ac76ed88fbade57d7d259fa6bb4ddb312}{W\+E\+I\+G\+HT}
+\item 
+\hyperlink{classDrawSampling_a73c5d308c9d35c89746810be84e6834d}{Weight\+Mat} \hyperlink{classDrawSampling_a63072a47a8eb23f487f94418c9a27208}{S\+UM}
+\item 
+int \hyperlink{classDrawSampling_a8ce16ba19af34ba89f7722b7d993143c}{T\+O\+T\+\_\+\+W\+E\+I\+G\+HT}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classDrawSampling_a65a0b2e1d234d93049c4807d32fd009d}{L\+EN} = 7
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Uniform sampling algorithm. 
+
+\subsection{Member Typedef Documentation}
+\index{Draw\+Sampling@{Draw\+Sampling}!Weight\+Mat@{Weight\+Mat}}
+\index{Weight\+Mat@{Weight\+Mat}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{Weight\+Mat}{WeightMat}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::array$<$std\+::array$<$int, {\bf L\+EN}$>$, {\bf L\+EN}$>$ {\bf Draw\+Sampling\+::\+Weight\+Mat}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDrawSampling_a73c5d308c9d35c89746810be84e6834d}{}\label{classDrawSampling_a73c5d308c9d35c89746810be84e6834d}
+
+
+Slide length of the fine division. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Draw\+Sampling@{Draw\+Sampling}!Draw\+Sampling@{Draw\+Sampling}}
+\index{Draw\+Sampling@{Draw\+Sampling}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{Draw\+Sampling(\+Canvas \&canvas)}{DrawSampling(Canvas &canvas)}}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Sampling\+::\+Draw\+Sampling (
+\begin{DoxyParamCaption}
+\item[{{\bf Canvas} \&}]{canvas}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDrawSampling_aa02ae6778de2385b7451f62f1e03cb1e}{}\label{classDrawSampling_aa02ae6778de2385b7451f62f1e03cb1e}
+
+
+\subsection{Member Function Documentation}
+\index{Draw\+Sampling@{Draw\+Sampling}!draw\+Impl@{draw\+Impl}}
+\index{draw\+Impl@{draw\+Impl}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{draw\+Impl(int x0, int y0, int x1, int y1, const Color \&color) override}{drawImpl(int x0, int y0, int x1, int y1, const Color &color) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Sampling\+::draw\+Impl (
+\begin{DoxyParamCaption}
+\item[{int}]{x0, }
+\item[{int}]{y0, }
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{const {\bf Color} \&}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classDrawSampling_a3d67fd8278cf17d4cb35958aa1a21e31}{}\label{classDrawSampling_a3d67fd8278cf17d4cb35958aa1a21e31}
+
+
+Implementation. 
+
+Suppose 0 $<$= slope $<$= 1 
+
+Reimplemented from \hyperlink{classDraw_ac9f2fe7c73db00834df73437767fa3ce}{Draw}.
+
+\index{Draw\+Sampling@{Draw\+Sampling}!gen\+Sum@{gen\+Sum}}
+\index{gen\+Sum@{gen\+Sum}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{gen\+Sum() const }{genSum() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Sampling\+::\+Weight\+Mat} Draw\+Sampling\+::gen\+Sum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDrawSampling_ac5f43bc9f50a57bb7226f6e971c0fd53}{}\label{classDrawSampling_ac5f43bc9f50a57bb7226f6e971c0fd53}
+
+
+\subsection{Member Data Documentation}
+\index{Draw\+Sampling@{Draw\+Sampling}!L\+EN@{L\+EN}}
+\index{L\+EN@{L\+EN}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{L\+EN}{LEN}}]{\setlength{\rightskip}{0pt plus 5cm}const int Draw\+Sampling\+::\+L\+EN = 7\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classDrawSampling_a65a0b2e1d234d93049c4807d32fd009d}{}\label{classDrawSampling_a65a0b2e1d234d93049c4807d32fd009d}
+\index{Draw\+Sampling@{Draw\+Sampling}!S\+UM@{S\+UM}}
+\index{S\+UM@{S\+UM}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{S\+UM}{SUM}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weight\+Mat} Draw\+Sampling\+::\+S\+UM\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDrawSampling_a63072a47a8eb23f487f94418c9a27208}{}\label{classDrawSampling_a63072a47a8eb23f487f94418c9a27208}
+\index{Draw\+Sampling@{Draw\+Sampling}!T\+O\+T\+\_\+\+W\+E\+I\+G\+HT@{T\+O\+T\+\_\+\+W\+E\+I\+G\+HT}}
+\index{T\+O\+T\+\_\+\+W\+E\+I\+G\+HT@{T\+O\+T\+\_\+\+W\+E\+I\+G\+HT}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{T\+O\+T\+\_\+\+W\+E\+I\+G\+HT}{TOT_WEIGHT}}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Sampling\+::\+T\+O\+T\+\_\+\+W\+E\+I\+G\+HT\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDrawSampling_a8ce16ba19af34ba89f7722b7d993143c}{}\label{classDrawSampling_a8ce16ba19af34ba89f7722b7d993143c}
+\index{Draw\+Sampling@{Draw\+Sampling}!W\+E\+I\+G\+HT@{W\+E\+I\+G\+HT}}
+\index{W\+E\+I\+G\+HT@{W\+E\+I\+G\+HT}!Draw\+Sampling@{Draw\+Sampling}}
+\subsubsection[{\texorpdfstring{W\+E\+I\+G\+HT}{WEIGHT}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weight\+Mat} Draw\+Sampling\+::\+W\+E\+I\+G\+HT\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDrawSampling_ac76ed88fbade57d7d259fa6bb4ddb312}{}\label{classDrawSampling_ac76ed88fbade57d7d259fa6bb4ddb312}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{drawsampling_8h}{drawsampling.\+h}\item 
+\hyperlink{drawsampling_8cpp}{drawsampling.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Draw" name="Draw">
+<area shape="rect" id="node2" href="$classDrawSampling.html" title="Uniform sampling algorithm. " alt="" coords="5,204,132,355"/>
+<area shape="rect" id="node4" href="$classDrawWidth.html" title="Draw lines with a width. " alt="" coords="157,233,263,325"/>
+<area shape="rect" id="node3" href="$classDrawKernel.html" title="Kernel algorithm, i.e. " alt="" coords="13,403,124,480"/>
+</map>

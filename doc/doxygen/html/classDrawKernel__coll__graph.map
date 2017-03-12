@@ -1,0 +1,5 @@
+<map id="DrawKernel" name="DrawKernel">
+<area shape="rect" id="node2" href="$classDrawSampling.html" title="Uniform sampling algorithm. " alt="" coords="5,404,132,555"/>
+<area shape="rect" id="node3" href="$classDraw.html" title="Plain draw&#45;line algorithm. " alt="" coords="19,219,118,355"/>
+<area shape="rect" id="node4" href="$classCanvas.html" title="Interface to OpenCV. " alt="" coords="9,5,128,156"/>
+</map>

@@ -1,0 +1,115 @@
+\hypertarget{classCanvas}{}\section{Canvas Class Reference}
+\label{classCanvas}\index{Canvas@{Canvas}}
+
+
+Interface to Open\+CV.  
+
+
+
+
+{\ttfamily \#include $<$canvas.\+h$>$}
+
+
+
+Collaboration diagram for Canvas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classCanvas__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCanvas_a04e5495c637170cd93c20dbcc56b7cce}{Canvas} (int \+\_\+height, int \+\_\+width, const \hyperlink{canvas_8h_a084a39206618848fb8bc9187d3758c87}{Color} \&background)
+\begin{DoxyCompactList}\small\item\em In H\+SV color space. \end{DoxyCompactList}\item 
+void \hyperlink{classCanvas_a74e163f47b09d23afc273c5024918280}{draw\+Pixel} (int x, int y, const \hyperlink{canvas_8h_a084a39206618848fb8bc9187d3758c87}{Color} \&color, int alphaU, int alphaD)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDraw}{Draw} a pixel with given transparency alpha = alphaU / alphaD. \end{DoxyCompactList}\item 
+void \hyperlink{classCanvas_a2fcf1999f81d5cbbb55271b7f3db1565}{save} (const char $\ast$filename) const 
+\begin{DoxyCompactList}\small\item\em Save to file. \end{DoxyCompactList}\item 
+void \hyperlink{classCanvas_a2d3e01d8ec83c99e36b76f780c1bfa3e}{save\+Resized} (const char $\ast$filename, int \+\_\+height, int \+\_\+width) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCanvas_aada7c1a775b50c422801d477e82a53ec}{height}
+\item 
+int \hyperlink{classCanvas_a31434dcd520abfa1c1f3fb778514d173}{width}
+\item 
+cv\+::\+Mat3b \hyperlink{classCanvas_ac5e24c180dd682c1fe9f57f4f11d5db6}{data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to Open\+CV. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{Canvas(int \+\_\+height, int \+\_\+width, const Color \&background)}{Canvas(int _height, int _width, const Color &background)}}]{\setlength{\rightskip}{0pt plus 5cm}Canvas\+::\+Canvas (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+height, }
+\item[{int}]{\+\_\+width, }
+\item[{const {\bf Color} \&}]{background}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCanvas_a04e5495c637170cd93c20dbcc56b7cce}{}\label{classCanvas_a04e5495c637170cd93c20dbcc56b7cce}
+
+
+In H\+SV color space. 
+
+Initialize an empty image 
+
+\subsection{Member Function Documentation}
+\index{Canvas@{Canvas}!draw\+Pixel@{draw\+Pixel}}
+\index{draw\+Pixel@{draw\+Pixel}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{draw\+Pixel(int x, int y, const Color \&color, int alpha\+U, int alpha\+D)}{drawPixel(int x, int y, const Color &color, int alphaU, int alphaD)}}]{\setlength{\rightskip}{0pt plus 5cm}void Canvas\+::draw\+Pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{const {\bf Color} \&}]{color, }
+\item[{int}]{alphaU, }
+\item[{int}]{alphaD}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCanvas_a74e163f47b09d23afc273c5024918280}{}\label{classCanvas_a74e163f47b09d23afc273c5024918280}
+
+
+\hyperlink{classDraw}{Draw} a pixel with given transparency alpha = alphaU / alphaD. 
+
+\index{Canvas@{Canvas}!save@{save}}
+\index{save@{save}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{save(const char $\ast$filename) const }{save(const char *filename) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Canvas\+::save (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCanvas_a2fcf1999f81d5cbbb55271b7f3db1565}{}\label{classCanvas_a2fcf1999f81d5cbbb55271b7f3db1565}
+
+
+Save to file. 
+
+\index{Canvas@{Canvas}!save\+Resized@{save\+Resized}}
+\index{save\+Resized@{save\+Resized}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{save\+Resized(const char $\ast$filename, int \+\_\+height, int \+\_\+width) const }{saveResized(const char *filename, int _height, int _width) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Canvas\+::save\+Resized (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{\+\_\+height, }
+\item[{int}]{\+\_\+width}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCanvas_a2d3e01d8ec83c99e36b76f780c1bfa3e}{}\label{classCanvas_a2d3e01d8ec83c99e36b76f780c1bfa3e}
+
+
+\subsection{Member Data Documentation}
+\index{Canvas@{Canvas}!data@{data}}
+\index{data@{data}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{data}{data}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat3b Canvas\+::data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCanvas_ac5e24c180dd682c1fe9f57f4f11d5db6}{}\label{classCanvas_ac5e24c180dd682c1fe9f57f4f11d5db6}
+\index{Canvas@{Canvas}!height@{height}}
+\index{height@{height}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{height}{height}}]{\setlength{\rightskip}{0pt plus 5cm}int Canvas\+::height\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCanvas_aada7c1a775b50c422801d477e82a53ec}{}\label{classCanvas_aada7c1a775b50c422801d477e82a53ec}
+\index{Canvas@{Canvas}!width@{width}}
+\index{width@{width}!Canvas@{Canvas}}
+\subsubsection[{\texorpdfstring{width}{width}}]{\setlength{\rightskip}{0pt plus 5cm}int Canvas\+::width\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCanvas_a31434dcd520abfa1c1f3fb778514d173}{}\label{classCanvas_a31434dcd520abfa1c1f3fb778514d173}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{canvas_8h}{canvas.\+h}\end{DoxyCompactItemize}
