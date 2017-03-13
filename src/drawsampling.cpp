@@ -16,6 +16,7 @@ void DrawSampling::drawImpl(int x0, int y0, int x1, int y1, const Color &color)
     int minY(y0); // Mininum realY while realX has not been changed
     int acc0(0), acc1(0), acc2(0); // Accumulated weight for realY = minY + 0, 1 or 2
     int dx(x1 - x0), dy(y1 - y0), e(-dx);
+    int height = LEN * dx / sqrt(dx * dx + dy * dy);
     for (int i = 0; i < dx * LEN; i++)
     {
         int *accLower, *accUpper;
@@ -26,9 +27,13 @@ void DrawSampling::drawImpl(int x0, int y0, int x1, int y1, const Color &color)
             assert(realY == minY + 1);
             accLower = &acc1, accUpper = &acc2;
         }
-        *accLower += SUM[LEN - 1 - gridY][gridX];
-        if (gridY)
-            *accUpper += SUM[gridY - 1][gridX];
+        if (gridY + height <= LEN)
+            *accLower += SUM[gridY + height - 1][gridX] - (gridY ? SUM[gridY - 1][gridX] : 0);
+        else
+        {
+            *accLower += SUM[LEN - 1 - gridY][gridX];
+            *accUpper += SUM[gridY + height - LEN][gridX];
+        }
 
         e += 2 * dy;
         if (e >= 0)
